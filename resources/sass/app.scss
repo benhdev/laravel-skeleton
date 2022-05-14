@@ -1,0 +1,54 @@
+@import 'variables';
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+   font-family: 'Bones';
+   src: url("/fonts/Bones.ttf") format("truetype");
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    background-color: #1a202c;
+}
+
+.welcome {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+
+    }
+
+    h2 {
+        font-size: 3rem;
+        // color: #ff2c1f;
+        color: #ee3a2d;
+    }
+
+    .icons {
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+            width: 2rem;
+        }
+    }
+}

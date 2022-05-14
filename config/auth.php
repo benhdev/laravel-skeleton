@@ -43,7 +43,24 @@ return [
         'api' => [
             'driver' => 'token',
             'provider' => 'users'
-        ]
+        ],
+
+        /**
+         * Here you can define custom authentication guards
+         * in order to enable them you must create a new guard
+         * and update the $guards property within AuthServiceProvider
+         *
+         * You can create a new guard using
+         * php artisan make:guard ExampleGuard
+         *
+         * driver - The key of the custom guard within AuthServiceProvider $guards
+         * provider - The provider to use for this custom guard
+         */
+
+        // 'custom' => [
+        //     'driver' => 'example',
+        //     'provider' => 'users'
+        // ]
     ],
 
     /*

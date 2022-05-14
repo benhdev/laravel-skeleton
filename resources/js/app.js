@@ -8,7 +8,6 @@ import VueCookies from 'vue-cookies';
 
 // import App from '@/Components/App.vue';
 import Index from '@/Pages/Index.vue';
-import Login from '@/Pages/Login.vue';
 
 const routes = [
     { path: '/', component: Index },
