@@ -31,6 +31,8 @@ protected $guards = [
 ```
 4. Create a route using the new authentication guard
 ```php
+use Illuminate\Support\Facades\Route;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 
@@ -44,6 +46,8 @@ Route::middleware('auth:custom')->get('/user', function () {
 The StyleMap helper class can be useful in generating styles based on user settings
 
 ```php
+use Illuminate\Support\Facades\Route;
+
 use Illuminate\Support\Facades\Auth;
 use App\Helpers\StyleMap;
 
