@@ -52,3 +52,10 @@ body {
         }
     }
 }
+
+@media screen {
+    @page {
+        margin: 0;
+        size: 300px 200px;
+    }
+}
