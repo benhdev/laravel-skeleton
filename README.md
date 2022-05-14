@@ -4,8 +4,58 @@
 
 Laravel Skeleton provides a barebones version of Laravel with some added features for extra customizability.
 
-`php artisan make:guard ExampleGuard`
+[Creating a custom Authentication Guard](#creating-a-custom-authentication-guard)  
+[Using a StyleMap](#using-a-stylemap)  
 
+
+##### Creating a custom Authentication Guard
+1. Create the guard class
+```
+php artisan make:guard ExampleGuard
+```
+2. Add an entry into the `guards` property within `config/auth.php`
+```php
+'guards' => [
+    // ...
+    'custom' => [
+        'driver' => 'example',
+        'provider' => 'users'
+    ]
+]
+```
+3. Add an entry into the `$guards` property of `App\Providers\AuthServiceProvider`
+```php
+protected $guards = [
+    'example' => 'App\Guards\ExampleGuard',
+];
+```
+4. Create a route using the new authentication guard
+```php
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
+
+Route::middleware('auth:custom')->get('/user', function () {
+    return Response::json(Auth::user());
+});
+```
+
+##### Using a StyleMap
+
+The StyleMap helper class can be useful in generating styles based on a user setting such as a theme
+
+```php
+use Illuminate\Support\Facades\Auth;
+use App\Helpers\StyleMap;
+
+Route::middleware('auth:api')->get('/user', function () {
+    return view('index', [
+        'vueRootStyle' => StyleMap::create([
+            'background-color' => Auth::user()->custom_background_color,
+            'color' => Auth::user()->custom_text_color
+        ])
+    ]);
+});
+```
 ## Laravel
 
 Laravel has the most extensive and thorough [documentation]() and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
