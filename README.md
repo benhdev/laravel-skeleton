@@ -41,7 +41,7 @@ Route::middleware('auth:custom')->get('/user', function () {
 
 ##### Using a StyleMap
 
-The StyleMap helper class can be useful in generating styles based on a user setting such as a theme
+The StyleMap helper class can be useful in generating styles based on user settings
 
 ```php
 use Illuminate\Support\Facades\Auth;
