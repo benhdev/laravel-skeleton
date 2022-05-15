@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
+use Symfony\Component\Console\Input\InputOption;
+
 class GuardMakeCommand extends GeneratorCommand
 {
     /**
@@ -45,7 +47,9 @@ class GuardMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->resolveStubPath('/stubs/guard.stub');
+        return $this->option('example')
+            ? $this->resolveStubPath('/stubs/guard.example.stub')
+            : $this->resolveStubPath('/stubs/guard.stub');
     }
 
     /**
@@ -79,6 +83,8 @@ class GuardMakeCommand extends GeneratorCommand
      */
     protected function getOptions()
     {
-        return [];
+        return [
+            ['example', null, InputOption::VALUE_NONE, 'Indicates the guard should contain example functionality'],
+        ];
     }
 }

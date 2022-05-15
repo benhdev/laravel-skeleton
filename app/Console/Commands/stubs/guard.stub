@@ -7,48 +7,44 @@ use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Http\Request;
 
+use Illuminate\Contracts\Auth\Authenticatable;
+
 class {{ class }} implements Guard
 {
     use GuardHelpers;
-
-    protected $inputKey = 'api_token';
-
-    protected $storageKey = 'api_token';
 
     public function __construct(UserProvider $provider, protected Request $request)
     {
         $this->provider = $provider;
     }
 
-    public function user()
+    public function attempt(Array $credentials = [])
     {
-        if ($user = $this->user) {
-            return $user;
-        }
-
-        $token = $this->request->bearerToken();
-
-        if (!empty($token)) {
-            $user = $this->provider->retrieveByCredentials([
-                $this->storageKey => $token
-            ]);
-        }
-
-        return $this->user = $user;
+        //
     }
 
     public function validate(Array $credentials = [])
     {
-        if (empty($credentials[$this->inputKey])) {
-            return false;
-        }
+        //
+    }
 
-        $credentials = [$this->storageKey => $credentials[$this->inputKey]];
+    public function user()
+    {
+        //
+    }
 
-        if ($this->provider->retrieveByCredentials($credentials)) {
-            return true;
-        }
+    public function login(Authenticatable $user)
+    {
+        //
+    }
 
-        return false;
+    public function logout()
+    {
+        //
+    }
+
+    public function logoutOtherDevices()
+    {
+        //
     }
 }
