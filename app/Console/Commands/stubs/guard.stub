@@ -18,12 +18,12 @@ class {{ class }} implements Guard
         $this->provider = $provider;
     }
 
-    public function attempt(Array $credentials = [])
+    public function attempt(array $credentials = [])
     {
         //
     }
 
-    public function validate(Array $credentials = [])
+    public function validate(array $credentials = [])
     {
         //
     }

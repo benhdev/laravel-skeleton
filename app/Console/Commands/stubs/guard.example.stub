@@ -68,7 +68,7 @@ class {{ class }} implements Guard
      *
      * @return string
      */
-    public function attempt(Array $credentials = [])
+    public function attempt(array $credentials = [])
     {
         // ensure we have credentials to match with a user
         if (empty($credentials[$this->identifier]) || empty($credentials['password'])) {
