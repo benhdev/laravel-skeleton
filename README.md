@@ -4,15 +4,27 @@
 
 Laravel Skeleton provides a barebones version of Laravel with some added features for extra customizability.
 
+[Artisan commands](#artisan-commands)  
 [Creating a custom Authentication Guard](#creating-a-custom-authentication-guard)  
 [Using a StyleMap](#using-a-stylemap)  
 
+##### Artisan commands
+```shell
+php artisan make:guard
+php artisan make:helper
+php artisan make:trait
+```
 
 ##### Creating a custom Authentication Guard
 1. Create the guard class
-```
+```shell
 php artisan make:guard ExampleGuard
 ```
+You may use the `--example` option to specify that the created guard class should contain some example functionality
+```shell
+php artisan make:guard ExampleGuard --example
+```
+
 2. Add an entry into the `guards` property within `config/auth.php`
 ```php
 'guards' => [

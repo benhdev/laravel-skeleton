@@ -12,6 +12,14 @@ use Illuminate\Auth\AuthenticationException;
 
 class AuthController extends Controller
 {
+    /**
+     * @method login()
+     * @example @uses php artisan make:guard --example
+     *
+     * @param Illuminate\Http\Request
+     *
+     * @return Illuminate\Http\JsonResponse
+     */
     public function login(Request $request)
     {
         $request->validate([
@@ -21,10 +29,10 @@ class AuthController extends Controller
 
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
+        if ($plainTextToken = Auth::attempt($credentials)) {
             return Response::json([
                 'status' => 'success',
-                'token' => Auth::user()->api_token
+                'token' => $plainTextToken // OR Auth::token()
             ]);
         }
 

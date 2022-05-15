@@ -6,14 +6,14 @@ use Illuminate\Console\GeneratorCommand;
 
 use Symfony\Component\Console\Input\InputOption;
 
-class GuardMakeCommand extends GeneratorCommand
+class TraitMakeCommand extends GeneratorCommand
 {
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'make:guard';
+    protected $name = 'make:trait';
 
     /**
      * The name of the console command.
@@ -24,21 +24,21 @@ class GuardMakeCommand extends GeneratorCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'make:guard';
+    protected static $defaultName = 'make:trait';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new guard class';
+    protected $description = 'Create a new trait';
 
     /**
      * The type of class being generated.
      *
      * @var string
      */
-    protected $type = 'Guard';
+    protected $type = 'Trait';
 
     /**
      * Get the stub file for the generator.
@@ -47,9 +47,7 @@ class GuardMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->option('example')
-            ? $this->resolveStubPath('/stubs/guard.example.stub')
-            : $this->resolveStubPath('/stubs/guard.stub');
+        return $this->resolveStubPath('/stubs/trait.stub');
     }
 
     /**
@@ -73,7 +71,7 @@ class GuardMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Guards';
+        return $rootNamespace.'\Traits';
     }
 
     /**
@@ -83,8 +81,6 @@ class GuardMakeCommand extends GeneratorCommand
      */
     protected function getOptions()
     {
-        return [
-            ['example', null, InputOption::VALUE_NONE, 'Indicates the guard should contain example functionality'],
-        ];
+        return [];
     }
 }
