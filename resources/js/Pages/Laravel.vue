@@ -16,7 +16,7 @@
 
         </div>
         <code>
-            composer require benhdev/skeleton
+            composer require phpskeleton/laravel
         </code>
     </div>
 </template>
