@@ -12,7 +12,7 @@
     <meta name="description" content="{{ config('app.description') }}" />
     <meta name="google" content="nositelinkssearchbox" />
     <meta name="google-site-verification" content="hw53f9VrJWK4CMzNZc1w37bD8G-agDcRqIcqcjw-c9Y" />
-    
+
     <meta property="og:title" content="{{ config('app.name', 'Laravel') }}"/>
     <meta property="og:image" content="{{ config('app.url') }}/img/logo.png"/>
 
@@ -20,8 +20,8 @@
 
     <meta property="og:url" content="{{ config('app.url') }}"/>
 
-    <link rel="icon" type="image/png" href="/img/logo.png"/>
-    <link rel="shortcut icon" type="image/png" href="/img/logo.png"/>
+    <link rel="icon" type="image/svg+xml" href="/img/icons/skeleton.svg" />
+    <link rel="shortcut icon" type="image/svg+xml" href="/img/icons/skeleton.svg" />
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

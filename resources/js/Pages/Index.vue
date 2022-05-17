@@ -1,7 +1,8 @@
 <template>
     <div class="welcome">
         <div class="content">
-            <img class="mb-2" src="/img/logotype.min.svg" />
+            <!-- <img class="mb-2" src="/img/logotype.min.svg" /> -->
+            <img class="mb-2" src="/img/icons/skeleton-solid.svg" />
             <h2 style="font-family: Bones;">Skeleton</h2>
 
             <div class="icons">
