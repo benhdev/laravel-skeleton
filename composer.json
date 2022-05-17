@@ -6,10 +6,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
-        "benhdev/skeleton": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
         "laravel/tinker": "^2.7",
+        "phpskeleton/laravel": "^1.0",
         "predis/predis": "^1.1"
     },
     "require-dev": {
