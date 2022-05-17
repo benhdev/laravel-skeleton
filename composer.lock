@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "258c75af359d7728e08510198e03dcdd",
+    "content-hash": "951f6d632d79f222bc68f6bc3b7f0d95",
     "packages": [
+        {
+            "name": "benhdev/skeleton",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benhdev/laravel-skeleton-framework.git",
+                "reference": "8c02ec8c31718dc34314530c94641f03eea57418"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benhdev/laravel-skeleton-framework/zipball/8c02ec8c31718dc34314530c94641f03eea57418",
+                "reference": "8c02ec8c31718dc34314530c94641f03eea57418",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "^9.12",
+                "illuminate/console": "^9.12",
+                "illuminate/contracts": "^9.12",
+                "illuminate/support": "^9.12",
+                "php": "^8.1",
+                "symfony/console": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Skeleton\\SkeletonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Skeleton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "benhdev"
+                }
+            ],
+            "description": "Laravel package",
+            "support": {
+                "issues": "https://github.com/benhdev/laravel-skeleton-framework/issues",
+                "source": "https://github.com/benhdev/laravel-skeleton-framework/tree/v1.0.0"
+            },
+            "time": "2022-05-16T13:41:42+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.9.3",
@@ -7404,16 +7455,16 @@
         },
         {
             "name": "spatie/flare-client-php",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/flare-client-php.git",
-                "reference": "1059fd8f229fa016b11063c6be9d1922d036adb7"
+                "reference": "86a380f5b1ce839af04a08f1c8f2697184cdf23f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/1059fd8f229fa016b11063c6be9d1922d036adb7",
-                "reference": "1059fd8f229fa016b11063c6be9d1922d036adb7",
+                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/86a380f5b1ce839af04a08f1c8f2697184cdf23f",
+                "reference": "86a380f5b1ce839af04a08f1c8f2697184cdf23f",
                 "shasum": ""
             },
             "require": {
@@ -7461,7 +7512,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/flare-client-php/issues",
-                "source": "https://github.com/spatie/flare-client-php/tree/1.1.1"
+                "source": "https://github.com/spatie/flare-client-php/tree/1.2.0"
             },
             "funding": [
                 {
@@ -7469,20 +7520,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-11T09:43:07+00:00"
+            "time": "2022-05-16T12:13:39+00:00"
         },
         {
             "name": "spatie/ignition",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ignition.git",
-                "reference": "6aa8f1c8c46aff30c9bd4c354dc865eeee2ed59f"
+                "reference": "997363fbcce809b1e55f571997d49017f9c623d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ignition/zipball/6aa8f1c8c46aff30c9bd4c354dc865eeee2ed59f",
-                "reference": "6aa8f1c8c46aff30c9bd4c354dc865eeee2ed59f",
+                "url": "https://api.github.com/repos/spatie/ignition/zipball/997363fbcce809b1e55f571997d49017f9c623d9",
+                "reference": "997363fbcce809b1e55f571997d49017f9c623d9",
                 "shasum": ""
             },
             "require": {
@@ -7544,7 +7595,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-12T08:19:04+00:00"
+            "time": "2022-05-16T13:16:07+00:00"
         },
         {
             "name": "spatie/laravel-ignition",

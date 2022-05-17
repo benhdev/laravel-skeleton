@@ -11,7 +11,10 @@
 
     <meta property="og:title" content="{{ config('app.name', 'Laravel') }}"/>
     <meta property="og:image" content="{{ config('app.url') }}/img/logo.png"/>
+
+    <meta name="description" content="{{ config('app.description') }}" />
     <meta property="og:description" content="{{ config('app.description') }}"/>
+
     <meta property="og:url" content="{{ config('app.url') }}"/>
 
     <link rel="icon" type="image/png" href="/img/logo.png"/>

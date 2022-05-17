@@ -26,14 +26,15 @@ Route::view('/', 'index');
 |
 */
 
-// Route::get('/{client:slug}', function (Client $client) {
+// use App\Models\User;
+//
+// Route::get('/{user:email}', function (User $user) {
 //     return view('index', [
-//         'vueRootStyle' => App\Helpers\StyleMap::create([
-//             'background-color' => $client->custom_background_color,
-//             'color' => $client->custom_text_color
+//         'vueRootStyle' => Skeleton\Helpers\StyleMap::create([
+//             'background-color' => '#aaa'
 //         ])
 //     ]);
-// ]);
+// });
 
 /*
 |--------------------------------------------------------------------------

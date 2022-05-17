@@ -29,7 +29,7 @@ class AuthController extends Controller
 
         $credentials = $request->only('email', 'password');
 
-        if ($plainTextToken = Auth::attempt($credentials)) {
+        if ($plainTextToken = Auth::guard('skeleton')->attempt($credentials)) {
             return Response::json([
                 'status' => 'success',
                 'token' => $plainTextToken // OR Auth::token()
